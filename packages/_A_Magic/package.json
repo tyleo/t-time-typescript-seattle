@@ -1,0 +1,11 @@
+{
+  "name": "Magic",
+  "types": "./target/ts/index.d.ts",
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  },
+  "scripts": {
+    "clean": "yarn rimraf target & yarn rimraf node_modules"
+  },
+  "version": "1.0.0"
+}

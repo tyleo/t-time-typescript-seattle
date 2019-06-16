@@ -1,0 +1,13 @@
+{
+  "name": "Constraint",
+  "dependencies": {
+    "Magic": "1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  },
+  "scripts": {
+    "clean": "yarn rimraf target & yarn rimraf node_modules"
+  },
+  "version": "1.0.0"
+}

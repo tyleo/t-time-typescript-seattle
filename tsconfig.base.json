@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strict": true
+  }
+}

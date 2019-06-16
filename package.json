@@ -1,0 +1,33 @@
+{
+  "name": "TeaTime",
+  "author": {
+    "name": "Tyler Wolf Leonhardt"
+  },
+  "private": true,
+  "version": "1.0.0",
+  "description": "Seattle TypeScript Meetup Demo",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.15.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "build": "tsc -b .",
+    "run:Any": "node .\\packages\\Any\\target\\ts\\index.js",
+    "run:Constraint": "node .\\packages\\Constraint\\target\\ts\\game.js",
+    "clean": "yarn lerna run --parallel clean & yarn clean:root",
+    "clean:root": "yarn rimraf node_modules"
+  },
+  "workspaces": {
+    "packages": [
+      "./packages/_0_Any",
+      "./packages/_1_Duplicate",
+      "./packages/_2_Generic",
+      "./packages/_3_Constraint",
+      "./packages/_4_ConstraintModified",
+      "./packages/_A_Magic"
+    ]
+  }
+}

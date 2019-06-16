@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/_0_Any"
+    },
+    {
+      "path": "./packages/_1_Duplicate"
+    },
+    {
+      "path": "./packages/_2_Generic"
+    },
+    {
+      "path": "./packages/_3_Constraint"
+    },
+    {
+      "path": "./packages/_4_ConstraintModified"
+    },
+    {
+      "path": "./packages/_A_Magic"
+    }
+  ]
+}

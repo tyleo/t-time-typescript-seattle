@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./ts",
+    "outDir": "./target"
+  },
+  "include": ["./ts/**/*.ts"],
+  "references": [
+    {
+      "path": "../_A_Magic"
+    }
+  ]
+}
