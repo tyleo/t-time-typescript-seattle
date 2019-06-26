@@ -9,10 +9,7 @@ export class ItemCollection {
   }
 
   use(callback: (item: any) => void) {
-    const randomIndex = Magic.getRandomIndex(this.items);
-    const item = this.isConsumable
-      ? this.items.splice(randomIndex, 1)[0]
-      : this.items[randomIndex];
+    const item = Magic.getRandomItem(this.items, this.isConsumable);
     if (item) {
       callback(item);
     }
