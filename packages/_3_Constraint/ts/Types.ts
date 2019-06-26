@@ -19,7 +19,7 @@ export class ItemCollection<T extends Magic.IItem> {
   }
 }
 
-export class Player extends Magic.Player {
+export class Mage extends Magic.Mage {
   spells = new ItemCollection<Magic.ISpell>(false);
   potions = new ItemCollection<Magic.IPotion>(true);
 

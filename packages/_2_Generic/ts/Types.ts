@@ -19,10 +19,11 @@ export class ItemCollection<T> {
   }
 }
 
-export class Player extends Magic.Player {
+export class Mage extends Magic.Mage {
   spells = new ItemCollection<Magic.ISpell>(false);
   potions = new ItemCollection<Magic.IPotion>(true);
 
   // Problem, item collections can contain anything.
-  //numbers = new ItemCollection<number>(true); // This doesn't make sense!?
+  // We may have errors later if we add an incorret item type.
+  numbers = new ItemCollection<number>(true);
 }

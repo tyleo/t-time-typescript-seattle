@@ -38,7 +38,7 @@ export class PotionCollection {
   }
 }
 
-export class Player extends Magic.Player {
+export class Mage extends Magic.Mage {
   spells = new SpellCollection(false);
   potions = new PotionCollection(true);
 }

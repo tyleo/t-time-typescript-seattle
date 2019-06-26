@@ -7,7 +7,7 @@
   "include": ["./ts/**/*.ts"],
   "references": [
     {
-      "path": "../_A_Magic"
+      "path": "../Magic"
     }
   ]
 }

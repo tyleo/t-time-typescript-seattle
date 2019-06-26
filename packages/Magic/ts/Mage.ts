@@ -1,4 +1,4 @@
-export class Player {
+export class Mage {
   health = 100;
   magic = 100;
   power = 1;

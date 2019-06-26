@@ -1,14 +1,14 @@
 import * as Magic from "Magic";
 
 export class ItemCollection<T extends Magic.IItem> {
-  constructor(private isConsumable: boolean, private user: Player) {}
+  constructor(private isConsumable: boolean, private user: Mage) {}
   private items: T[] = [];
 
   pickUp(item: T) {
     this.items.push(item);
   }
 
-  use(useOn: Player) {
+  use(useOn: Mage) {
     const randomIndex = Magic.getRandomIndex(this.items);
     const item = this.isConsumable
       ? this.items.splice(randomIndex, 1)[0]
@@ -19,7 +19,7 @@ export class ItemCollection<T extends Magic.IItem> {
   }
 }
 
-export class Player extends Magic.Player {
+export class Mage extends Magic.Mage {
   spells = new ItemCollection<Magic.ISpell>(false, this);
   potions = new ItemCollection<Magic.IPotion>(true, this);
 }

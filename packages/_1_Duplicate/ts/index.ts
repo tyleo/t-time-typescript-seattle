@@ -1,8 +1,8 @@
 import * as Magic from "Magic";
 import * as Types from "./Types";
 
-const blackMage = new Types.Player("Black Mage");
-const whiteMage = new Types.Player("White Mage");
+const blackMage = new Types.Mage("Black Mage");
+const whiteMage = new Types.Mage("White Mage");
 
 whiteMage.potions.pickUp(Magic.DefensePotion);
 blackMage.potions.pickUp(Magic.DefensePotion);
