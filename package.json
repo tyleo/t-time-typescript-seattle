@@ -27,6 +27,7 @@
       "./packages/_2_Generic",
       "./packages/_3_Constraint",
       "./packages/_4_ConstraintModified",
+      "./packages/_5_Game",
       "./packages/Magic"
     ]
   }

@@ -1,17 +1,17 @@
 import * as Magic from "Magic";
 import * as Types from "./Types";
 
-const blackMage = new Types.Mage("Black Mage");
-const whiteMage = new Types.Mage("Black Mage");
+const darkMage = new Types.Mage("Dark Mage");
+const lightMage = new Types.Mage("Dark Mage");
 
-whiteMage.potions.pickUp(Magic.DefensePotion);
-blackMage.potions.pickUp(Magic.DefensePotion);
+lightMage.potions.pickUp(Magic.DefensePotion);
+darkMage.potions.pickUp(Magic.DefensePotion);
 
-whiteMage.spells.pickUp(Magic.LightningSpell);
-blackMage.spells.pickUp(Magic.LightningSpell);
+lightMage.spells.pickUp(Magic.LightningSpell);
+darkMage.spells.pickUp(Magic.LightningSpell);
 
-whiteMage.spells.use(spell => spell.use(whiteMage, blackMage));
-whiteMage.potions.use(potion => potion.use(whiteMage, blackMage));
+lightMage.spells.use(spell => spell.use(lightMage, darkMage));
+lightMage.potions.use(potion => potion.use(lightMage, darkMage));
 
 // Generics will also prevent the problem and we don't have to duplicate code to do it.
-// whiteMage.potions.pickUp(Magic.FireSpell);
+// lightMage.potions.pickUp(Magic.FireSpell);

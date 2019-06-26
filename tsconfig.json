@@ -17,6 +17,9 @@
       "path": "./packages/_4_ConstraintModified"
     },
     {
+      "path": "./packages/_5_Game"
+    },
+    {
       "path": "./packages/Magic"
     }
   ]
