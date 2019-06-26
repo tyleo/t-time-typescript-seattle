@@ -1,5 +1,6 @@
 {
   "name": "Magic",
+  "main": "./target/ts/index.js",
   "types": "./target/ts/index.d.ts",
   "devDependencies": {
     "rimraf": "^2.6.3"

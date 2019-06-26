@@ -7,4 +7,12 @@ export class Mage {
   stunned = false;
 
   constructor(public name: string) {}
+
+  print() {
+    console.log(
+      `The ${this.name}'s stats are Health: ${this.health}, Magic: ${
+        this.magic
+      }, Power: ${this.power}, Defense: ${this.defense}, Speed: ${this.speed}`
+    );
+  }
 }

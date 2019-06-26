@@ -8,6 +8,10 @@ export class ItemCollection<T extends Magic.IItem> {
     this.items.push(item);
   }
 
+  length() {
+    return this.items.length;
+  }
+
   use(useOn: Mage) {
     const randomIndex = Magic.getRandomIndex(this.items);
     const item = this.isConsumable
