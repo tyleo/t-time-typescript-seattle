@@ -14,7 +14,7 @@ const print = (useOn: Mage, potion: IPotion) =>
 export const PowerPotion: IPotion = {
   potionName: "Power Potion",
   use(_user: Mage, useOn: Mage) {
-    useOn.power += 1;
+    useOn.power += 3;
     print(useOn, PowerPotion);
   }
 };
@@ -30,7 +30,7 @@ export const HealthPotion: IPotion = {
 export const MagicPotion: IPotion = {
   potionName: "Health Potion",
   use(_user: Mage, useOn: Mage) {
-    useOn.magic += 5;
+    useOn.magic += 25;
     print(useOn, MagicPotion);
   }
 };
@@ -38,7 +38,7 @@ export const MagicPotion: IPotion = {
 export const DefensePotion: IPotion = {
   potionName: "Defense Potion",
   use(_user: Mage, useOn: Mage) {
-    useOn.defense += 1;
+    useOn.defense += 3;
     print(useOn, DefensePotion);
   }
 };
@@ -46,7 +46,7 @@ export const DefensePotion: IPotion = {
 export const FastPotion: IPotion = {
   potionName: "Fast Potion",
   use(_user: Mage, useOn: Mage) {
-    useOn.speed += 1;
+    useOn.speed += 10;
     print(useOn, FastPotion);
   }
 };
@@ -62,6 +62,16 @@ export const SwapHealthAndMagicPotion: IPotion = {
 };
 
 export const Potions = [
+  PowerPotion,
+  PowerPotion,
+  PowerPotion,
+  PowerPotion,
+  MagicPotion,
+  FastPotion,
+  PowerPotion,
+  MagicPotion,
+  DefensePotion,
+  FastPotion,
   PowerPotion,
   HealthPotion,
   MagicPotion,

@@ -9,13 +9,13 @@ let lightCounter = 0;
 const lightMage = new Types.Mage("Light Mage");
 
 const stepMage = (active: Types.Mage, target: Types.Mage) => {
-  if (Math.random() > 0.75) {
+  if (Math.random() > 0.7) {
     // Pick up potion
     const potion = Magic.Potions[Magic.getRandomIndex(Magic.Potions)];
     console.log(`The ${active.name} picked up a ${potion.potionName}.`);
     active.potions.pickUp(potion);
   } else {
-    if (Math.random() > 0.8 && active.potions.length() > 0) {
+    if (Math.random() > 0.5 && active.potions.length() > 0) {
       active.potions.use(active);
     } else {
       active.spells.use(target);
@@ -52,6 +52,10 @@ const runGame = () => {
   }
 };
 
+Magic.Spells.forEach(spell => {
+  lightMage.spells.pickUp(spell);
+  darkMage.spells.pickUp(spell);
+});
 lightMage.spells.pickUp(Magic.FireSpell);
 darkMage.spells.pickUp(Magic.FireSpell);
 

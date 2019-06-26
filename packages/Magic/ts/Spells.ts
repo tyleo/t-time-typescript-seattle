@@ -15,7 +15,7 @@ export const LightningSpell: ISpell = {
   spellName: "Lightning",
   use(user: Mage, useOn: Mage) {
     user.magic -= 2;
-    useOn.health -= Math.max(user.power - useOn.defense, 0);
+    useOn.health -= Math.max(user.power * 5, 1);
     useOn.stunned = true;
     print(user, LightningSpell);
   }
@@ -25,29 +25,21 @@ export const FireSpell: ISpell = {
   spellName: "Fire",
   use(user: Mage, useOn: Mage) {
     user.magic -= 3;
-    useOn.health -= Math.max(user.power * 2 - useOn.defense, 1);
+    useOn.speed += 1;
+    useOn.health -= Math.max(user.power * 7 - useOn.defense, 1);
     print(user, FireSpell);
   }
 };
 
-export const SlowSpell: ISpell = {
-  spellName: "Slow",
+export const IceSpell: ISpell = {
+  spellName: "Ice",
   use(user: Mage, useOn: Mage) {
     user.magic -= 2;
     useOn.speed -= 1;
     useOn.speed = Math.max(useOn.speed, 1);
-    print(user, SlowSpell);
+    useOn.health -= Math.max(user.power * 2 - useOn.defense / 2, 1);
+    print(user, IceSpell);
   }
 };
 
-export const TinySpell: ISpell = {
-  spellName: "Tiny",
-  use(user: Mage, useOn: Mage) {
-    user.magic -= 2;
-    useOn.power -= 1;
-    useOn.power = Math.max(useOn.power, 1);
-    print(user, TinySpell);
-  }
-};
-
-export const Spells = [LightningSpell, FireSpell, SlowSpell, TinySpell];
+export const Spells = [LightningSpell, FireSpell, IceSpell];

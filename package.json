@@ -15,8 +15,7 @@
   },
   "scripts": {
     "build": "tsc -b .",
-    "run:Any": "node .\\packages\\Any\\target\\ts\\index.js",
-    "run:Constraint": "node .\\packages\\Constraint\\target\\ts\\game.js",
+    "start": "node .\\packages\\_5_Game\\target\\ts\\index.js",
     "clean": "yarn lerna run --parallel clean & yarn clean:root",
     "clean:root": "yarn rimraf node_modules"
   },
