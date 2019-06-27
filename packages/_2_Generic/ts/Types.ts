@@ -9,10 +9,7 @@ export class ItemCollection<T> {
   }
 
   use(callback: (item: T) => void) {
-    const randomIndex = Magic.getRandomIndex(this.items);
-    const item = this.isConsumable
-      ? this.items.splice(randomIndex, 1)[0]
-      : this.items[randomIndex];
+    const item = Magic.getRandomItem(this.items, this.isConsumable);
     if (item) {
       callback(item);
     }
@@ -24,6 +21,6 @@ export class Mage extends Magic.Mage {
   potions = new ItemCollection<Magic.IPotion>(true);
 
   // Problem, item collections can contain anything.
-  // We may have errors later if we add an incorret item type.
+  // We may have errors later if we add an incorrect item type.
   numbers = new ItemCollection<number>(true);
 }
